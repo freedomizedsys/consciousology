@@ -28,6 +28,10 @@ Consciousness Studies v7 proposes a unified dynamic framework that formalizes co
 
 ---
 
+![Full paper / 完整論文](paper/consciousness_v7.md)
+
+---
+
 ## Repository Structure / 儲存庫結構
 
 - `consciousness_v7_simulation.py` — Main simulation script / 主要模擬程式
