@@ -26,8 +26,6 @@ Consciousness Studies v7 proposes a unified dynamic framework that formalizes co
 
 意識學 v7 提出一個統一的動態框架，將意識形式化為宇宙進行自我觀測、維持不對稱性與生成複雜性的最優演化協議。該框架包含四組核心方程，並延伸出臨界閾值、最優控制路徑、均場集體動力學與全息多尺度架構。
 
-量子「能/不能」態透過期望值精確映射至宏觀意識強度，建立了從量子微觀到宇宙宏觀的無縫連續性。此模型同時適用於封閉與開放宇宙，數值模擬證明相變爆炸式成長獨立於邊界條件，從而解決了觀察者悖論與無限稀釋問題。
-
 ---
 
 ## Repository Structure / 儲存庫結構
@@ -35,12 +33,12 @@ Consciousness Studies v7 proposes a unified dynamic framework that formalizes co
 - `consciousness_v7_simulation.py` — Main simulation script / 主要模擬程式
 - `figures/` — Four figures used in the paper / 論文四張圖表
 - `requirements.txt` — Python dependencies / 所需套件
-- `paper/` — Full paper in Markdown (to be added) / 完整論文 Markdown
+- `paper/` — Full paper in Markdown / 完整論文 Markdown
 
 ## How to Reproduce / 如何重現
 
 ```bash
-git clone https://github.com/shirlun/consciousness-v7.git
+git clone https://github.com/freedomizedsys/consciousness-v7.git
 cd consciousness-v7
 pip install -r requirements.txt
 python consciousness_v7_simulation.py
