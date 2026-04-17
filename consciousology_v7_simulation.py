@@ -9,7 +9,7 @@ import seaborn as sns
 # ====================== 歐拉方法（基準）======================
 def euler_integrate(params, t_max=100, dt=1.0):
     t = np.arange(0, t_max + dt, dt)
-    C, M, P = 0.1, 0.0, params[2]   # 初始條件
+    C, M, P = 0.1, 0.0, params[2]   # Initial conditions 初始條件
     C_list, M_list = [], []
     
     for ti in t:
