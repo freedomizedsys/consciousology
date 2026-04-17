@@ -1,8 +1,10 @@
 # Consciousology v7  
 **Existence Operating System — A Dynamic Unified Framework for Consciousness Generation, Collective Coexistence, and Cosmic Evolution**
 
-**意識學 v7**  
+# 意識學 v7
 **存在操作系統——意識生成、集體共存與宇宙演化的動態統一框架**
+
+---
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -52,11 +54,14 @@ python consciousology_v7_simulation.py
 
 The figures will be generated in the `figures/` folder.
 
-Contact / 聯絡方式
+### Contact / 聯絡方式
 
-Author / 作者: freedomizedsystemsltd@gmail.com
+freedomizedsystemsltd@gmail.com
 
-License / 授權
+### Author / 作者:
+
+shirlun@freedomized.com
+
+### License / 授權
+
 MIT License
-
-
