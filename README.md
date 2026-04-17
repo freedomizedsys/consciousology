@@ -28,13 +28,13 @@ Consciousology v7 proposes a unified dynamic framework that formalizes conscious
 
 ---
 
-![Full paper / 完整論文](paper/consciousness_v7.md)
+![Full paper / 完整論文](paper/consciousology_v7.md)
 
 ---
 
 ## Repository Structure / 儲存庫結構
 
-- `consciousness_v7_simulation.py` — Main simulation script / 主要模擬程式
+- `consciousology_v7_simulation.py` — Main simulation script / 主要模擬程式
 - `figures/` — Four figures used in the paper / 論文四張圖表
 - `requirements.txt` — Python dependencies / 所需套件
 - `paper/` — Full paper in Markdown / 完整論文 Markdown
@@ -42,10 +42,10 @@ Consciousology v7 proposes a unified dynamic framework that formalizes conscious
 ## How to Reproduce / 如何重現
 
 ```bash
-git clone https://github.com/freedomizedsys/consciousness-v7.git
-cd consciousness-v7
+git clone https://github.com/freedomizedsys/consciousology.git
+cd consciousology
 pip install -r requirements.txt
-python consciousness_v7_simulation.py
+python consciousology_v7_simulation.py
 ```
 
 The figures will be generated in the `figures/` folder.
