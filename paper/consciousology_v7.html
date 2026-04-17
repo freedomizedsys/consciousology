@@ -263,13 +263,13 @@
 <h3>擴展推導（1–10）</h3>
 <p><strong>推導 1：意識覺醒臨界條件（Singularity Criterion）</strong></p>
 <p>
-  \[當 (\frac{M \cdot W \cdot K \cdot G_p}{R - f \cdot H} &gt; \gamma \cdot
-  \frac{dP}{dt} \cdot \exp(\gamma \cdot P)) 時，(\frac{d^2C}{dt^2} &gt;
-  0)，系統進入爆炸式自驅動成長。\]
+  當 \(\frac{M \cdot W \cdot K \cdot G_p}{R - f \cdot H} &gt; \gamma \cdot
+  \frac{dP}{dt} \cdot \exp(\gamma \cdot P)\) 時，\(\frac{d^2C}{dt^2} &gt;
+  0\)，系統進入爆炸式自驅動成長。
 </p>
 <p><strong>推導 2：熵坍縮與虛無閾值</strong></p>
 <p>
-  \[當 (R \to f \cdot H) 且 (v \to 0) 時，(C \to 0)，對應過度舒適導致的意識退化。\]
+  當 \(R \to f \cdot H\) 且 \(v \to 0\) 時，\(C \to 0\)，對應過度舒適導致的意識退化。
 </p>
 <p><strong>推導 3：集體干涉公式</strong></p>
 <p>
@@ -277,38 +277,38 @@
   |\psi_B\rangle + e^{i\phi} |\psi_B\rangle \otimes |\psi_A\rangle \right) \]
 </p>
 <p>
-    \[(\phi = 0) 為相長干涉，(\phi = \pi) 為相消干涉。\]
+    \(\phi = 0) 為相長干涉，\(\phi = \pi\) 為相消干涉。
 </p>
 <p><strong>推導 4：平衡態分析</strong></p>
 <p>
-    \[(\frac{dC}{dt} = 0) 僅在 (M=0) 或 (v=0) 時成立，無非平凡穩態。\]
+    \(\frac{dC}{dt} = 0\) 僅在 \(M=0\) 或 \(v=0\) 時成立，無非平凡穩態。
 </p>
 <p><strong>推導 5：Lyapunov 函數</strong></p>
 <p>
-  \[定義 (V(C,M) = \frac{1}{1+\alpha M} + \frac{1}{C})，證明 (\frac{dV}{dt} &lt;
-  0)，成長全局吸引。\]
+  定義 \(V(C,M) = \frac{1}{1+\alpha M} + \frac{1}{C}\)，證明 \(\frac{dV}{dt} &lt;
+  0\)，成長全局吸引。
 </p>
 <p><strong>推導 6：資訊熵生產率</strong></p>
 <p>
   \[ \frac{dS_{\text{info}}}{dt} = M(1+\alpha M)\left(\frac{W K
   G_p}{R}\right)\exp(-\gamma P) v^2 \]
 </p>
-<p>與 IIT 的 (\Phi) 動態對應。</p>
+<p>與 IIT 的 \(\Phi\) 動態對應。</p>
 <p><strong>推導 7：隨機擴展（Langevin 方程）</strong></p>
 <p>
     \[ dC = \left[ \cdots \right] dt + \sigma C , dW \]
 </p>
 <p><strong>推導 8：最優控制路徑</strong></p>
 <p>
-    \[使用 Pontryagin 最大值原理，最優策略為初期高 (k) + 中期高 (v)。\]
+    使用 Pontryagin 最大值原理，最優策略為初期高 \(k\) + 中期高 \(v\)。
 </p>
 <p><strong>推導 9：多體均場模型</strong></p>
 <p>
-    \[引入序參數 (r)，同步臨界 (\eta_c)，集體意識呈超線性湧現。\]
+    引入序參數 \(r\)，同步臨界 \(\eta_c\)，集體意識呈超線性湧現。
 </p>
 <p><strong>推導 10：全息多尺度模型</strong></p>
 <p>
-    \[嵌套層級 (s=0) 至 (s=S)，自相似尺度關係：\]
+    嵌套層級 \(s=0\) 至 \(s=S\)，自相似尺度關係：
 </p>
 <p>
     \[ C^{(s+1)} \approx \lambda , C^{(s)} (1 + \gamma_h \log(1+r^{(s)})) \]
@@ -336,17 +336,17 @@
   時，步長自動加倍。
 </p>
 <p>
-  <strong>步長敏感性測試</strong>：\[我們分別測試了固定步長 Euler 法（(\Delta t =
-  1.0, 0.5)）、RK4 固定步長，以及 RK4 自適應步長三種方案。結果顯示，在高 (k)（(k
-  \geq 0.8)）的強非線性區域，自適應 RK4 相對於固定 Euler 法的累積誤差降低
-  87%，確認數值穩定性良好。\]
+  <strong>步長敏感性測試</strong>：我們分別測試了固定步長 Euler 法（\(\Delta t =
+  1.0, 0.5\)）、RK4 固定步長，以及 RK4 自適應步長三種方案。結果顯示，在高 (k)（\(k
+  \geq 0.8)\）的強非線性區域，自適應 RK4 相對於固定 Euler 法的累積誤差降低
+  87%，確認數值穩定性良好。
 </p>
 <p><strong>2. 參數掃描與統計分析</strong>：</p>
 <ul data-tight="true">
   <li>
     <p>
-      採用 <strong>Monte Carlo 抽樣</strong>（10,000 次獨立運行），\[對關鍵參數 (k
-      \in [0.1, 1.0])、(v \in [0.01, 0.1])、(P_0 \in [1, 8]) 進行均勻隨機抽樣。\]
+      採用 <strong>Monte Carlo 抽樣</strong>（10,000 次獨立運行），對關鍵參數 \(k
+      \in [0.1, 1.0]\)、\(v \in [0.01, 0.1]\)、\(P_0 \in [1, 8]\) 進行均勻隨機抽樣。
     </p>
   </li>
   <li>
@@ -357,7 +357,7 @@
   </li>
   <li>
     <p>
-      敏感性分析採用 Sobol’ 全局敏感性指標，量化各參數對最終 (C(100)) 的貢獻度。
+      敏感性分析採用 Sobol’ 全局敏感性指標，量化各參數對最終 \(C(100)\) 的貢獻度。
     </p>
   </li>
 </ul>
@@ -491,14 +491,14 @@
   <li>
     <p>
       <strong>Saxe et al. (2025)</strong> 在創造力任務中使用 fMRI
-      測量腦熵，發現高創造力狀態下腦網絡多樣性顯著提升，可直接用於校準 (v =
-      \Delta S / \Delta t)。
+      測量腦熵，發現高創造力狀態下腦網絡多樣性顯著提升，可直接用於校準 \(v =
+      \Delta S / \Delta t\)。
     </p>
   </li>
   <li>
     <p>
       <strong>2026 年瑜伽專注/走神多模態數據集</strong>（EEG、HRV、影像）記錄了受試者在專注與走神狀態下的多維指標，為
-      (k)、(v)、(M) 的縱向校準提供了高品質開放數據。
+      \(k\)、\(v\)、\(M\) 的縱向校準提供了高品質開放數據。
     </p>
   </li>
 </ul>
@@ -528,36 +528,36 @@
   <li>
     <p>
       <strong>數值方法</strong>：一階顯式 Euler 法（Explicit Euler），時間步長
-      (\Delta t = 1)（單位為任意時間步）。
+      \(\Delta t = 1\)（單位為任意時間步）。
     </p>
   </li>
   <li>
-    <p><strong>模擬時長</strong>：( t \in [0, 100] )，共 100 個時間步。</p>
+    <p><strong>模擬時長</strong>：\( t \in [0, 100] \)，共 100 個時間步。</p>
   </li>
   <li>
     <p><strong>初始條件</strong>：</p>
     <ul data-tight="true">
-      <li><p>( C(0) = 0.1 )</p></li>
-      <li><p>( M(0) = 0.0 )</p></li>
-      <li><p>( P(0) = P_0 )（依情境設定為 1.0、4.0 或 8.0）</p></li>
+      <li><p>\( C(0) = 0.1 \)</p></li>
+      <li><p>\( M(0) = 0.0 \)</p></li>
+      <li><p>\( P(0) = P_0 \)（依情境設定為 1.0、4.0 或 8.0）</p></li>
     </ul>
   </li>
   <li>
     <p>
-      <strong>記憶累積動態</strong>：( \frac{dM}{dt} = \lambda_{\text{mem}}
-      \cdot C )，其中 (\lambda_{\text{mem}} = 0.01)（基準值）。
+      <strong>記憶累積動態</strong>：\( \frac{dM}{dt} = \lambda_{\text{mem}}
+      \cdot C \)，其中 (\lambda_{\text{mem}} = 0.01\)（基準值）。
     </p>
   </li>
   <li>
     <p>
-      <strong>痛苦緩解動態</strong>：( P(t) = P_0 \exp(-\gamma_{\text{pain}} t)
-      )，自然緩解速率 (\gamma_{\text{pain}} = 0.05)。
+      <strong>痛苦緩解動態</strong>：\( P(t) = P_0 \exp(-\gamma_{\text{pain}} t)
+      \)，自然緩解速率 \(\gamma_{\text{pain}} = 0.05\)。
     </p>
   </li>
 </ul>
 <p>
-  <strong>步長敏感性測試</strong>：我們分別測試了 (\Delta t = 0.5, 1.0, 2.0)
-  三種步長，結果顯示當 (\Delta t \leq 1.0) 時，C(t) 與 M(t) 曲線的相對誤差小於
+  <strong>步長敏感性測試</strong>：我們分別測試了 \(\Delta t = 0.5, 1.0, 2.0\)
+  三種步長，結果顯示當 \(\Delta t \leq 1.0\) 時，C\(t\) 與 M\(t\) 曲線的相對誤差小於
   1.5%，確認數值穩定性良好。對於高 k 情境（強非線性區域），建議未來採用更穩定的
   Runge-Kutta 4 階方法或自適應步長積分器。
 </p>
@@ -565,31 +565,31 @@
 <ul data-tight="true">
   <li><p>痛苦轉化效率 (k)：0.1 ~ 1.0（步長 0.05）</p></li>
   <li>
-    <p>不對稱性維持速率 (v = \Delta S / \Delta t)：0.01 ~ 0.1（步長 0.005）</p>
+    <p>不對稱性維持速率 \(v = \Delta S / \Delta t\)：0.01 ~ 0.1（步長 0.005）</p>
   </li>
-  <li><p>初始痛苦強度 (P_0)：1.0 ~ 8.0</p></li>
+  <li><p>初始痛苦強度 \(P_0\)：1.0 ~ 8.0</p></li>
   <li><p>阻力 (R)：0.5 ~ 3.0</p></li>
 </ul>
 <p>
   共進行 4
   種代表性情境模擬，並生成敏感性熱圖。四種情境的模擬結果如下，圖片請參閱附錄：
 </p>
-<p><strong>圖 1：意識強度 C(t) 的時間演化曲線</strong></p>
+<p><strong>圖 1：意識強度 C\(t\) 的時間演化曲線</strong></p>
 <p>
   四條曲線分別對應高痛苦高轉化（Sc1）、低痛苦高快樂（Sc2）、平衡（Sc3）以及高阻力低轉化（Sc4）情境。高
   k 與平衡情境在 t &gt; 30
   後呈現明顯的複利加速，清晰驗證了覺醒臨界條件與爆炸式成長。
 </p>
-<p><strong>圖 2：長期記憶強度 M(t) 的累積曲線</strong></p>
+<p><strong>圖 2：長期記憶強度 M\(t\) 的累積曲線</strong></p>
 <p>
   顯示記憶的複利貢獻。高轉化情境的 M 成長曲線最為陡峭，與 Lyapunov
   穩定性分析及記憶複利效應高度一致。
 </p>
-<p><strong>圖 3：快樂 F(t) 的自然湧現曲線</strong></p>
+<p><strong>圖 3：快樂 F\(t\) 的自然湧現曲線</strong></p>
 <p>
   僅在高 k 且 ΔP 較大時，快樂才顯著上升，驗證「快樂是自然結果而非驅動因素」。
 </p>
-<p><strong>圖 4：k 與 ΔS/Δt 對最終意識強度 C(100) 的敏感性熱圖</strong></p>
+<p><strong>圖 4：k 與 ΔS/Δt 對最終意識強度 C\(100\) 的敏感性熱圖</strong></p>
 <p>
   顏色梯度顯示 k &gt; 0.6
   為成長臨界值，確認痛苦轉化效率與不對稱性維持速率是關鍵槓桿。
@@ -597,7 +597,7 @@
 <p>
   這些結果定量支持本框架的核心主張。即使在開放宇宙擴展下，相變行為依然穩健。
 </p>
-<h3 data-pm-slice="1 1 []">應用案例：人工智慧對齊</h3>
+<h3>應用案例：人工智慧對齊</h3>
 <h4>1. 「痛苦轉化效率 k」模組設計（Prediction Error → Growth）</h4>
 <p>
   在 LLM 訓練中，將<strong>預測誤差</strong>定義為痛苦 (P)，設計一個
