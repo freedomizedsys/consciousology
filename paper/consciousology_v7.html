@@ -16,8 +16,11 @@
             svg: { fontCache: 'global' }
         };
         
-        // 強制重新渲染
-        window.addEventListener('load', () => MathJax.typeset());
+        // 頁面載入後強制重新渲染
+        window.addEventListener('load', () => {
+            MathJax.typesetClear();
+            MathJax.typeset();
+        });
     </script>
 
     <style>
