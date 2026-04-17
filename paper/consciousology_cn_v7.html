@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>意識學 v7 - 中文版本</title>
     
-    <!-- MathJax 3 配置（加強版） -->
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>
         MathJax = {
@@ -14,15 +13,14 @@
                 displayMath: [['$$', '$$'], ['\\[', '\\]']],
                 processEscapes: true
             },
-            svg: {
-                fontCache: 'global'
-            }
+            svg: { fontCache: 'global' }
         };
         
-        // 頁面載入後強制重新處理 MathJax
-        window.onload = function() {
+        // 頁面載入後強制重新渲染
+        window.addEventListener('load', () => {
+            MathJax.typesetClear();
             MathJax.typeset();
-        };
+        });
     </script>
 
     <style>
@@ -34,21 +32,20 @@
             line-height: 1.85; 
             color: #333;
         }
-        h1, h2, h3 { color: #2c3e50; margin-top: 35px; }
+        h1, h2, h3 { color: #2c3e50; margin-top: 40px; }
         .abstract { 
             background: #f8f9fa; 
-            padding: 25px; 
+            padding: 28px; 
             border-radius: 10px; 
             margin: 30px 0; 
         }
         img { 
             max-width: 100%; 
             height: auto; 
-            margin: 30px 0; 
+            margin: 35px 0; 
             border: 1px solid #ddd; 
             border-radius: 8px; 
         }
-        .math { margin: 20px 0; }
     </style>
 </head>
 <body>
@@ -73,7 +70,7 @@
 
 <strong>存在操作系統——意識生成、集體共存與宇宙演化的動態統一框架</strong><br />（數學框架 + 擴展推導 + 數值模擬 + 跨學科應用）
 
-<p><strong>作者</strong><br />shirlun@freedomized.com (mailto://freedomizedsystemsltd@gmail.com)</p>
+<p><strong>作者</strong><br />shirlun@freedomized.com (mailto:freedomizedsystemsltd@gmail.com)</p>
 <p><strong>日期</strong><br />2026 年 4 月</p>
 <p><strong>版本</strong><br />v7.0</p>
 <h3>摘要</h3>
@@ -399,119 +396,107 @@ $$ C_i = |\alpha_i|^2 (G_0 + k P) \times W_i \times K_i \times G_{p,i} \times v_
   <tbody>
     <tr>
       <th>
-        <p><span style="font-size: x-small;">參數</span></p>
+        <span style="font-size: x-small;">參數</span>
       </th>
       <th>
-        <p><span style="font-size: x-small;">推薦測量工具</span></p>
+        <span style="font-size: x-small;">推薦測量工具</span>
       </th>
       <th>
-        <p><span style="font-size: x-small;">最新研究支持</span></p>
+        <span style="font-size: x-small;">最新研究支持</span>
       </th>
       <th>
-        <p><span style="font-size: x-small;">校準方法示例</span></p>
+        <span style="font-size: x-small;">校準方法示例</span>
       </th>
     </tr>
     <tr>
       <td>
-        <p>
+        
           <span style="font-size: x-small;">\(v = \Delta S / \Delta t\)（不對稱性維持速率）</span>
-        </p>
+        
       </td>
       <td>
-        <p>
+        
           <span style="font-size: x-small;">fMRI 腦熵（brain entropy）</span>
-        </p>
+        
       </td>
       <td>
-        <p>
+        
           <span style="font-size: x-small;">Saxe et al. (2025) 創造力任務 fMRI 研究；Medaglia et al. (2024)
             腦網絡多樣性</span>
-        </p>
+        
       </td>
       <td>
-        <p>
+        
           <span style="font-size: x-small;">創造力任務期間腦熵變化 + 每日探索日誌，計算活動熵</span>
-        </p>
+        
       </td>
     </tr>
     <tr>
       <td>
-        <p><span style="font-size: x-small;">(k)（痛苦轉化效率）</span></p>
+        <span style="font-size: x-small;">(k)（痛苦轉化效率）</span>
       </td>
       <td>
-        <p>
+
           <span style="font-size: x-small;">EEG α波不對稱性 + fMRI DMN 活動</span>
-        </p>
+
       </td>
       <td>
-        <p>
+
           <span style="font-size: x-small;">Fox et al. (2024) 正念訓練前後 fMRI；2025 瑜伽專注/走神數據集</span>
-        </p>
+
       </td>
       <td>
-        <p>
+
           <span style="font-size: x-small;">8 週正念或瑜伽訓練前後 Δ彈性分數，最小二乘擬合</span>
-        </p>
+
       </td>
     </tr>
     <tr>
       <td>
-        <p><span style="font-size: x-small;">(M)（長期記憶強度）</span></p>
+        <span style="font-size: x-small;">(M)（長期記憶強度）</span>
       </td>
       <td>
-        <p>
+
           <span style="font-size: x-small;">EEG θ/γ 耦合 + 間隔重複測試</span>
-        </p>
+
       </td>
       <td>
-        <p>
+
           <span style="font-size: x-small;">Herweg et al. (2023)；2026 瑜伽多模態數據集</span>
-        </p>
+
       </td>
       <td>
-        <p>
+
           <span style="font-size: x-small;">間隔重複回憶準確率 + EEG θ-γ 相位振幅耦合</span>
-        </p>
+
       </td>
     </tr>
     <tr>
       <td>
-        <p><span style="font-size: x-small;">(P)（痛苦強度）</span></p>
+        <span style="font-size: x-small;">(P)（痛苦強度）</span>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">HRV（RMSSD / LF/HF 比值）</span>
-        </p>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">Thayer et al. (2012)；2026 瑜伽走神狀態 HRV 數據</span>
-        </p>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">每日 HRV 測量 + 自報 PANAS 負向情緒分數</span>
-        </p>
       </td>
     </tr>
     <tr>
       <td>
-        <p><span style="font-size: x-small;">(H)（快樂強度）</span></p>
+        <span style="font-size: x-small;">(H)（快樂強度）</span>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">PANAS 正向情緒量表 + EEG α不對稱性</span>
-        </p>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">Watson et al. (1988)；2026 瑜伽專注狀態 EEG 數據</span>
-        </p>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">即時 PANAS 自報 + 左前額葉 α功率</span>
-        </p>
       </td>
     </tr>
   </tbody>
@@ -749,7 +734,7 @@ class MeanFieldSynchronizationModule:
     </li>
     <li>
       <p>
-        <strong>避免個體 reward hacking</strong>：透過共享反思（shared_reflection）與序參數
+        <strong>避免個體的獎勵破解</strong>：透過共享反思（shared_reflection）與序參數
         (r)，單一代理無法獨自最大化短期獎賞，必須與其他代理保持相長干涉。
       </p>
     </li>
@@ -783,110 +768,86 @@ class MeanFieldSynchronizationModule:
   <tbody>
     <tr>
       <th>
-        <p><span style="font-size: x-small;">情境</span></p>
+        <span style="font-size: x-small;">情境</span>
       </th>
       <th>
-        <p><span style="font-size: x-small;">IIT 4.0 的局限性</span></p>
+        <span style="font-size: x-small;">IIT 4.0 的局限性</span>
       </th>
       <th>
-        <p><span style="font-size: x-small;">意識學 v7 框架的優勢</span></p>
+        <span style="font-size: x-small;">意識學 v7 框架的優勢</span>
       </th>
       <th>
-        <p><span style="font-size: x-small;">意識學 v7 對應機制</span></p>
+        <span style="font-size: x-small;">意識學 v7 對應機制</span>
       </th>
     </tr>
     <tr>
       <td>
-        <p>
           <span style="font-size: x-small;">意識的<strong>時間演化與成長</strong></span>
-        </p>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">僅提供靜態 Φ，無法解釋 Φ 如何隨時間增加</span>
-        </p>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">提供明確的動態成長引擎與複利效應</span>
-        </p>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">dC/dt 方程、記憶複利項 (1+αM)</span>
-        </p>
       </td>
     </tr>
     <tr>
       <td>
-        <p><span style="font-size: x-small;">痛苦、創傷與轉化過程</span></p>
+        <span style="font-size: x-small;">痛苦、創傷與轉化過程</span>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">無法區分「痛苦」對意識的貢獻</span>
-        </p>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">將痛苦轉化效率 k 視為核心槓桿</span>
-        </p>
       </td>
       <td>
-        <p><span style="font-size: x-small;">k·P 項與覺醒臨界條件</span></p>
+        <span style="font-size: x-small;">k·P 項與覺醒臨界條件</span>
       </td>
     </tr>
     <tr>
       <td>
-        <p>
           <span style="font-size: x-small;">意識的<strong>臨界相變</strong></span>
-        </p>
       </td>
       <td>
-        <p><span style="font-size: x-small;">缺乏相變預測機制</span></p>
+        <span style="font-size: x-small;">缺乏相變預測機制</span>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">明確定義爆炸式成長的臨界條件</span>
-        </p>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">Singularity Criterion (推導 1)</span>
-        </p>
       </td>
     </tr>
     <tr>
       <td>
-        <p><span style="font-size: x-small;">開放宇宙或外部輸入情境</span></p>
+        <span style="font-size: x-small;">開放宇宙或外部輸入情境</span>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">假設封閉系統，難以處理外部影響</span>
-        </p>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">自然容納外部驅動項 E_ext(t)</span>
-        </p>
       </td>
       <td>
-        <p><span style="font-size: x-small;">開放系統擴展方程</span></p>
+        <span style="font-size: x-small;">開放系統擴展方程</span>
       </td>
     </tr>
     <tr>
       <td>
-        <p><span style="font-size: x-small;">長期記憶與歷史慣性</span></p>
+        <span style="font-size: x-small;">長期記憶與歷史慣性</span>
       </td>
       <td>
-        <p><span style="font-size: x-small;">無記憶累積機制</span></p>
+        <span style="font-size: x-small;">無記憶累積機制</span>
       </td>
       <td>
-        <p><span style="font-size: x-small;">記憶 M 作為複利放大器</span></p>
+        <span style="font-size: x-small;">記憶 M 作為複利放大器</span>
       </td>
       <td>
-        <p>
           <span style="font-size: x-small;">M(t) 累積動態與 Lyapunov 函數</span>
-        </p>
       </td>
     </tr>
   </tbody>
@@ -1530,7 +1491,7 @@ class MeanFieldSynchronizationModule:
 
 <p>Author / 作者:</p>
 
-<p>shirlun@freedomized.com (mailto://freedomizedsystemsltd@gmail.com)</p>
+<p>shirlun@freedomized.com (mailto:freedomizedsystemsltd@gmail.com)</p>
 
 <p>License / 授權</p>
 
