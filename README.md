@@ -6,7 +6,17 @@
 
 ---
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This paper is licensed under **CC BY 4.0**
+
+本論文採用 **CC BY 4.0** 授權
+
+[![CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+The code is licensed under **MIT License**
+
+程式碼採用 **MIT License**
+
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
@@ -65,7 +75,3 @@ freedomizedsystemsltd@gmail.com
 ### Author / 作者:
 
 shirlun@freedomized.com
-
-### License / 授權
-
-MIT License
