@@ -461,186 +461,307 @@
         topologies.
       </p>
             
-        <h3>Numerical simulation verification, parameter calibration and graphical 
-        analysis</h3>
-        <p><b>1. Numerical simulation methods</b></p>
-        <p>To ensure the stability and reproducibility of the numerical results, 
-        this study employs the fourth-order Runge-Kutta method (RK4) as the main 
-        integrator, combined with adaptive step size control. The core differential 
-        equation system (including \(C(t)\), \(M(t)\), \(P(t)\) and memory accumulation 
-        dynamics) is integrated with an initial time step of \(\Delta t_0 = 0.5\), 
-        and the error tolerance is set to \(10^{-6}\). When the local truncation 
-        error exceeds the threshold, the step size is automatically halved; when 
-        the error is below \(10^{-8}\), the step size is automatically doubled.
+      <h3>
+        Numerical Simulation, Parameter Calibration, and Graphical Analysis
+      </h3>
+      <br />
+      <h4>1. Numerical simulation methods</h4>
+      <p>
+        To ensure the stability and reproducibility of the numerical results,
+        this study employs the <b>fourth-order Runge-Kutta method (RK4)</b> as
+        the primary integrator, integrated with
+        <b>adaptive step-size control</b>. The core system of differential
+        equations—comprising \( C(t) \), \( M(t) \), \( P(t) \), and the
+        dynamics of memory accumulation—is integrated with an initial time step
+        of \( \Delta t_0 = 0.5 \) and an error tolerance of \( 10^{-6} \). The
+        algorithm is designed such that the step size is automatically halved
+        whenever the local truncation error exceeds the threshold, and doubled
+        if the error falls below \( 10^{-8} \).
+      </p>
+      <p>
+        <b>Step-Size Sensitivity Analysis</b>: Three numerical schemes were
+        evaluated to verify convergence: the fixed-step Euler method (\( \Delta
+        t = 1.0, 0.5 \)), the fixed-step RK4, and the adaptive-step RK4. The
+        results demonstrate that in highly nonlinear regions characterized by
+        high \( k \) (\( k \geq 0.8 \)), the adaptive RK4 reduces cumulative
+        error by 87% compared to the fixed-step Euler method, confirming robust
+        numerical stability and the reliability of the simulation framework.
+      </p>
+      
+      <h4>2. Parameter Scanning and Statistical Analysis Methods</h4>
+        <p>
+          A Monte Carlo sampling approach (10,000 independent trials) can be
+          employed to perform uniform random sampling across the key parameter
+          space: \(k \in [0.1, 1.0]\), \(v \in [0.01, 0.1]\), and \(P_0 \in [1,
+          8]\).
         </p>
-        <p><b>Step size sensitivity test:</b> We tested three schemes: the Euler 
-        method with a fixed step size (\(\Delta t = 1.0, 0.5\)), the RK4 method 
-        with a fixed step size, and the RK4 method with an adaptive step size. The 
-        results indicate that in the strong nonlinear region characterized by high 
-        (k) (\(k \geq 0.8\)), the adaptive RK4 reduces cumulative error by 87% compared 
-        to the fixed-step Euler method, confirming robust numerical stability.</p>
-        <p><b>2. Parameter scanning and statistical analysis:</b></p>
-        <ul data-tight="true">
-          <li>
-          <p>Monte Carlo sampling (10,000 independent runs) was used to uniformly 
-          randomize the key parameters \(k \in [0.1, 1.0]\), \(v \in [0.01, 0.1]\), 
-          and \(P_0 \in [1, 8]\).</p>
-          </li>
-          <li>
-          <p>Simultaneously, Bayesian parameter estimation (implemented with PyMC) 
-          was used to infer the posterior distribution using 8-week longitudinal 
-          self-reported data and HRV/EEG indices as priors.</p>
-          </li>
-          <li>
-          <p>Sensitivity analysis employed Sobol&#39;s global sensitivity indices to 
-          quantify the contribution of each parameter to the final value of \(C(100)\).</p>
-          </li>
-        </ul>
-        <h4 style="text-align: left;">3. Feasibility and Empirical Basis of Parameter 
-        Calibration</h4>
-        <p>All parameters in this framework are designed to be longitudinally calibrated 
-        using existing neurotechnology and psychometric tools. The empirical calibration 
-        pathways and latest supporting research for the key parameters are listed 
-        below: </p>
-        <table border="1" style="border-collapse: collapse; width: 100%;">
+        <p>
+          Simultaneously, Bayesian parameter estimation—implemented via PyMC—can
+          be utilized to infer posterior distributions; 8-week longitudinal
+          self-report data were integrated alongside HRV/EEG indices to
+          establish empirical priors.
+        </p>
+        <p>
+          For sensitivity analysis, Sobol’ global sensitivity indices can be
+          calculated to quantify the individual contribution of each parameter
+          to the final variance of \(C(100)\).
+        </p>
+
+      <h4>
+        3. Feasibility and Empirical Basis of Parameter Calibration
+      </h4>
+      <p>
+        All parameters in this framework are designed to be longitudinally
+        calibrated using existing neurotechnology and psychometric tools. The
+        empirical calibration pathways and supporting research for the key
+        parameters are listed below:
+      </p>
+      <p><b>Empirical Calibration Matrix</b></p>
+
+      <table border="1" style="border-collapse: collapse; width: 100%;">
+        <tbody>
           <tr>
             <th>
-            <span style="font-size: x-small;">parameter</span>
+              <p><span style="font-size: x-small;">Parameter</span></p>
             </th>
             <th>
-            <span style="font-size: x-small;">Recommended measuring tools</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >Recommended Instrumentation</span
+                >
+              </p>
             </th>
             <th>
-            <span style="font-size: x-small;">Latest research supports</span>
+              <p>
+                <span style="font-size: x-small;">Supporting Literature</span>
+              </p>
             </th>
             <th>
-            <span style="font-size: x-small;">Calibration method example</span>
+              <p>
+                <span style="font-size: x-small;">Calibration Methodology</span>
+              </p>
             </th>
           </tr>
           <tr>
             <td>
-            <span style="font-size: x-small;">\(v = \Delta S / \Delta t\)
-            </span><span style="font-size: small;">(Asymmetry maintenance rate)</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >\(v = \Delta S / \Delta t\)&nbsp;</span
+                ><span style="font-size: small;"
+                  >(Asymmetry maintenance rate)</span
+                >
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">fMRI brain entropy</span>
+              <p><span style="font-size: x-small;">fMRI brain entropy</span></p>
             </td>
             <td>
-            <span style="font-size: x-small;">Saxe et al. (2025) fMRI study of 
-            creativity tasks; Medaglia et al. (2024) Brain network diversity
-            </span>
+              <p>
+                <span style="font-size: x-small;">
+                  Saxe et al. (2025) fMRI study of creativity tasks; Medaglia et
+                  al. (2024) Brain network diversity
+                </span>
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">Brain entropy changes during creativity 
-            tasks + daily exploration logs, calculating activity entropy </span>
-            
+              <p>
+                <span style="font-size: x-small;">
+                  Mapping brain entropy fluctuations during creative tasks
+                  against daily exploration logs to calculate activity entropy.
+                </span>
+              </p>
             </td>
           </tr>
           <tr>
             <td>
-            <span style="font-size: x-small;">\(k\) (Pain Conversion Efficiency)</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >\(k\) (Pain Conversion Efficiency)</span
+                >
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">EEG α wave asymmetry + fMRI DMN 
-            activity</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >EEG α&nbsp;wave asymmetry + fMRI DMN activity</span
+                >
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">Fox et al. (2024) fMRI before and 
-            after mindfulness training; 2025 Yoga focus/distraction dataset
-            </span>
+              <p>
+                <span style="font-size: x-small;">
+                  Fox et al. (2024) fMRI before and after mindfulness training;
+                  2025 Yoga focus/distraction dataset
+                </span>
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">Least squares fit of Δelasticity 
-            fraction before and after 8 weeks of mindfulness or yoga training.
-            </span>
+              <p>
+                <span style="font-size: x-small;">
+                  Least-squares fitting of cognitive elasticity fractions before
+                  and after 8-week mindfulness or yoga intervention.
+                </span>
+              </p>
             </td>
           </tr>
           <tr>
             <td>
-            <span style="font-size: x-small;">\(M\) (Long-term memory Intensity)</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >\(M\) (Long-term memory Intensity)</span
+                >
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">EEG θ/γ coupling + interval repeated 
-            testing</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >EEG θ/γ coupling; interval repeated testing</span
+                >
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">Herweg et al. (2023); 2026 Yoga 
-            Multimodal Dataset</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >Herweg et al. (2023); 2026 Yoga Multimodal Dataset</span
+                >
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">Interval recall accuracy + EEG 
-            θ-γ phase amplitude coupling</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >Integrating interval recall accuracy with EEG
+                  \(\theta\)-\(\gamma\) phase-amplitude coupling (PAC).</span
+                >
+              </p>
             </td>
           </tr>
           <tr>
             <td>
-            <span style="font-size: x-small;">\(P\) (Intensity of Pain)</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >\(P\) (Intensity of Pain)</span
+                >
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">HRV (RMSSD / LF / HF ratio)</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >HRV (RMSSD / LF / HF ratio)</span
+                >
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">Thayer et al. (2012); 2026 HRV 
-            data on yoga mindfulness.</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >Thayer et al. (2012); 2026 HRV data on yoga
+                  mindfulness.</span
+                >
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">Daily HRV measurement + self-reported 
-            PANAS negative sentiment score </span>
+              <p>
+                <span style="font-size: x-small;">
+                  Correlation of daily HRV metrics with self-reported PANAS
+                  negative affect scores.
+                </span>
+              </p>
             </td>
           </tr>
           <tr>
             <td>
-            <span style="font-size: x-small;">\(H\) (Intensity of pleasure)</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >\(H\) (Intensity of pleasure)</span
+                >
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">PANAS Positive Emotion Scale + 
-            EEG α Asymmetry</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >PANAS Positive Emotion Scale; α&nbsp;Asymmetry</span
+                >
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">Watson et al. (1988); 2026 Yoga 
-            Concentration EEG Data</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >Watson et al. (1988); 2026 Yoga Concentration EEG Data</span
+                >
+              </p>
             </td>
             <td>
-            <span style="font-size: x-small;">Real-time PANAS self-report + left 
-            prefrontal α power</span>
+              <p>
+                <span style="font-size: x-small;"
+                  >Real-time PANAS tracking combined with left prefrontal
+                  \(\alpha\) power analysis.</span
+                >
+              </p>
             </td>
           </tr>
-        </table>
-        <p><strong>Latest empirical evidence supports:</strong></p>
-        <ul data-tight="true">
-          <li>
-          <p><strong>Saxe et al. (2025)</strong> used fMRI to measure brain entropy 
-          in a creativity task and found that brain network diversity was significantly 
-          enhanced in a high-creativity state, which can be directly used for \(v 
-          = \Delta S / \Delta t\)。 </p>
-          </li>
-          <li>
-          <p><strong>The 2026 Yoga Focus/Distraction Multimodal Dataset</strong>(EEG, 
-          HRV, Image) recorded multidimensional indicators of subjects&#39; focus and 
-          distraction states, providing data for \(k\)、\(v\)、\(M\). The longitudinal 
-          calibration provides high-quality open data. </p>
-          </li>
-        </ul>
-        <p><strong>Calibration procedure recommendations:</strong></p>
-        <ol data-tight="true">
-          <li>
-          <p><strong>Longitudinal tracking: </strong>strong>Subjects recorded self-reported scales daily 
-          and synchronized wearable HRV/EEG data.</p>
-          </li>
-          <li>
-          <p><strong>Bayesian fitting: </strong>strong>Using data from 4–12 weeks combined with fMRI brain 
-          entropy and HRV indices, the posterior distribution of parameters is inferred.
+        </tbody>
+      </table>
+
+      <p><b>Recent Empirical Evidence</b></p>
+      <p>
+        The proposed framework is reinforced by cutting-edge findings in
+        neurodynamics:
+      </p>
+      <ul data-tight="true">
+        <li>
+          <p>
+            <b>Brain Entropy &amp; Creativity</b>: Saxe et al. (2025) utilized
+            fMRI to quantify brain entropy during creative cognition,
+            identifying a significant enhancement in network diversity. This
+            provides a direct empirical proxy for the asymmetry maintenance rate
+            \( v \).
           </p>
-          </li>
-          <li>
-          <p><strong>Multimodal validation: </strong>strong>By combining brain entropy, θ/γ coupling, and 
-          behavioral indicators, a mapping relationship between parameters and neural 
-          markers is established. </p>
-          </li>
-        </ol>
-        <p>These empirical tools and the latest datasets show that the parameters 
-        of this framework are not only theoretically dimensionless, but also highly 
-        operable and verifiable. </p>
+        </li>
+        <li>
+          <p>
+            <b>Multimodal Datasets</b>: The 2026 Yoga Focus/Distraction
+            Multimodal Dataset (comprising EEG, HRV, and image data) offers
+            high-fidelity, longitudinal indicators of attentional states. This
+            dataset serves as a foundational resource for calibrating&nbsp;
+            \(k\), \(v\) and \(M\) across diverse subjects.
+          </p>
+        </li>
+      </ul>
+      <p><b>Recommended Calibration Protocol</b></p>
+      <p>
+        To ensure high-quality parameter estimation, a three-tier procedure is
+        recommended:
+      </p>
+      <ol data-tight="true">
+        <li>
+          <p>
+            <b>Longitudinal Tracking</b>: Continuous daily synchronization of
+            self-report scales with wearable HRV/EEG data to capture temporal
+            fluctuations.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Bayesian Inference</b>: Utilizing 4–12 weeks of longitudinal
+            data, integrated with fMRI brain entropy and HRV indices, to infer
+            the posterior distribution of parameters.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Cross-modal Validation</b>: Establishing rigorous mapping between
+            mathematical parameters and neural markers by synthesizing brain
+            entropy, \(\theta\)/\(\gamma\) coupling, and behavioral performance.
+          </p>
+        </li>
+      </ol>
+      <p>
+        The parameters of this framework are not merely theoretical
+        abstractions; they are computationally operable and experimentally
+        verifiable, bridging the gap between abstract consciousness modeling and
+        empirical neuroscience.
+      </p>
+
+            
         <h4>4. Numerical simulation methods</h4>
         <p>To verify the framework&#39;s dynamic behavior and predictive capabilities, 
         we employ the explicit Euler forward integration method to numerically solve 
