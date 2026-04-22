@@ -1242,35 +1242,166 @@ class MeanFieldSynchronizationModule:
             than dissipation through the pain conversion coefficient (k) and knowledge 
             integration.</p>
 
-  <h4>5. Negentropy Efficiency, Multi-Agent Dynamic Damping, and Their Integration</h4>
-  <p>To more precisely characterize the growth dynamics of a consciousness system within a noisy environment, 
-          this framework introduces and integrates Negentropy Efficiency (\(\eta_{\text{neg}}\)) and the Effective 
-          Damping Factor (\(R_{\text{eff},i}\)).
-  </p>
-  <p><b>Definition of Negentropy Efficiency</b></p>
-  <p>Negentropy Efficiency (\(\eta_{\text{neg}}\)) is defined as the system’s integrated capacity to resist internal "downward pull." The formulation is given by:</p>
-  <p>$$ \eta_{\text{neg}} = - \left( \delta_{\text{deco}} \cdot \phi + \gamma_{\text{noise}} \cdot \sigma^2 + \lambda_{\text{sym}} \cdot (1 - v) + \mu_{\text{neg}} \cdot P_{\text{untrans}} \right) $$</p>
-  <p>Where the terms correspond to quantum decoherence, stochastic noise, the trend of symmetry restoration, and untransformed suffering, respectively.</p>
-  <p>Negentropy efficiency represents the incremental contribution to ordered structure and consciousness growth generated per unit of energy consumption.
-          A higher \( \eta_{\text{neg}} \)&nbsp;indicates that the system can achieve greater ordered growth and compounding effects at a lower energetic cost.</p>
-  <p>This metric serves as a supplementary diagnostic tool for "Consciousness Intensity (C)", facilitating the assessment of whether the growth of individual consciousness, AI systems,
-          or collective consciousness is efficient and sustainable. It provides an actionable quantitative dimension for consciousness health.</p>
-  <p><b>Upgrading the Damping Factor</b></p>
-  <p>In multi-agent interaction scenarios, the growth of a single agent is subject to dynamic feedback from others. Consequently,
-          we upgrade the standard damping factor to the Effective Damping Factor:</p>
-    <p>$$ R_{\text{eff},i} = R_0 + \sum_{j \neq i} \left( \alpha_{ij} \cdot \Delta C_j - \beta_{ij} \cdot Coop_{ij} \right) $$</p>
-    <p>Here, \(R_0\) represents the baseline environmental resistance, while \(\alpha_{ij}\) and \(\beta_{ij}\) denote the competitive damping coefficient and cooperative gain coefficient, respectively.
-            \(Coop_{ij}\) quantifies the degree of cooperation between two agents (measurable via indicators such as shared memory depth or goal alignment).</p>
-    <p>This refinement enables this framework to better describe real-world non-zero-sum interactions: consciousness growth is no longer an isolated optimization process but a dynamic equilibrium embedded
-            within a multi-player game network. By optimizing the cooperative term \(\beta_{ij}\), the system-wide negentropy efficiency can be significantly enhanced,
-            facilitating a shift from competition-oriented survival strategies to cooperation-oriented growth strategies.</p>
-              <p><b>Integration of Negentropy Efficiency and Effective Damping</b></p>
-    <p>Upon integrating these components, the dynamic equation for consciousness intensity in a multi-agent environment is expressed as:</p>
-    <p>$$ \frac{dC_i}{dt} = k_i v_i (1 - r_i^{(s)}) - \beta R_{\text{eff},i} + \eta_{\text{neg},i} $$</p>
-    <p>This integration allows this framework to simultaneously account for external multi-agent game resistance and internal negentropy drag.
-            This significantly enhances the descriptive power and robustness of the framework in complex social and multi-agent environments.
-            Detailed simulation code, along with parameter quantization and calibration methods for negentropy efficiency, are provided in the Appendix.
-    </p>
+      <h4>
+        <strong
+          >6. Precise Modeling of Low-Consciousness States: Continuous Spectrum
+          and Stability Analysis</strong
+        >
+      </h4>
+      <p>
+      Building upon the multi-agent dynamic damping and retro-entropy efficiency
+      above, this framework further provides a precise model for
+      low-consciousness states. Unconscious or low-consciousness states
+      naturally correspond to stable states where the consciousness intensity \(
+      C \) approaches an extremely low value (\( C \approx 0 \)). The dynamic
+      generation rate approaches zero when any one or more of the following
+      conditions are met:
+      </p>
+      <p>
+        $$ \frac{dC}{dt} \approx 0 \quad \text{when } k \to 0,, v \to 0,, M \to
+        0 \quad \text{or } R \gg [G_0 + k \cdot P] \times W \times K \times G_p
+        \times v \times (1 + \alpha \cdot M) $$
+      </p>
+      <p>
+        <strong>Boundary Conditions and Phenomenological Correspondence</strong
+        >:
+      </p>
+      <table border="1" style="border-collapse: collapse; width: 100%;">
+        <tbody>
+          <tr>
+            <th>
+              <span style="font-size: x-small;">Condition</span>
+            </th>
+            <th>
+              <span style="font-size: x-small;">Mechanism</span>
+            </th>
+            <th>
+              
+                <span style="font-size: x-small;"
+                  >Phenomenological Correspondence</span
+                >
+              
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-size: x-small;">( k \to 0 )</span>
+            </td>
+            <td>
+              
+                <span style="font-size: x-small;"
+                  >Pain transformation efficiency → 0</span
+                >
+             
+            </td>
+            <td>
+             
+                <span style="font-size: x-small;"
+                  >Depression / numbness / anesthesia</span
+                >
+             
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-size: x-small;">( v \to 0 )</span>
+            </td>
+            <td>
+             
+                <span style="font-size: x-small;"
+                  >Asymmetry maintenance rate → 0</span
+                >
+             
+            </td>
+            <td>
+              <span style="font-size: x-small;">Deep sleep / coma</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-size: x-small;">( M \to 0 )</span>
+            </td>
+            <td>
+              <p>
+                <span style="font-size: x-small;"
+                  >Long-term memory compounding vanishes</span
+                >
+              </p>
+            </td>
+            <td>
+             
+                <span style="font-size: x-small;"
+                  >Amnesia / vegetative state</span
+                >
+             
+            </td>
+          </tr>
+          <tr>
+            <td>
+             <span style="font-size: x-small;">( R ) dominant</span>
+            </td>
+            <td>
+             
+                <span style="font-size: x-small;"
+                  >Resistance / damping too strong</span
+                >
+             
+            </td>
+            <td>
+             
+                <span style="font-size: x-small;"
+                  >Environmental suppression / excessive comfort</span
+                >
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <strong>Stability Proof</strong>: Using the Lyapunov function \( V(C, M)
+        = \frac{1}{1 + \alpha M + 1/C} \), in the low-\( C \) region \( \dot{V}
+        &lt; 0 \) holds when \( kv &lt; r_c \) (critical value), proving that \(
+        C \approx 0 \) is a local attractor. The low-\( C \) region can be
+        further described by the simplified approximation:
+      </p>
+      <p>$$ C \approx k \log(1 + M v) \quad (\text{low-}C \text{ limit}) $$</p>
+      <p>
+        This approximation ensures that the model maintains
+        <strong>continuous spectrum characteristics</strong> across the entire
+        domain: from \( C \approx 0 \) (deep unconsciousness) through a gradual
+        gradient (light sleep \( C \sim 0.1 \), REM dreaming \( C \sim 1{\sim}2
+        \)) to high wakefulness (\( C &gt; 5 \)), without introducing hard
+        thresholds.
+      </p>
+      <p>
+        <strong>Numerical Simulation Validation</strong>: Using RK4 integration,
+        under conditions of low \( k/v/M \) or high \( R \), \( C \) decays to
+        \( &lt; 0.01 \) within \( t &lt; 20 \) and stabilizes. Sensitivity
+        analysis shows that once \( kv \) exceeds the critical value, the system
+        can self-drive a bootstrapping recovery toward a high-\( C \) phase
+        transition.
+      </p>
+      <p>
+        <strong>Consistency with Empirical Data</strong>: During deep sleep and
+        anesthesia, EEG δ waves dominate and frontoparietal-thalamic
+        connectivity decreases, corresponding to \( v \to 0 \) and low
+        integration (supported by studies such as Alkire et al., 2008).
+        Neuroscientific evidence indicates that consciousness exhibits a
+        continuous gradient rather than binary on/off changes. Micro-increases
+        in \( k \) (e.g., mindfulness/stimulation) or \( v \) (novel input) can
+        trigger self-driven growth from low \( C \), offering potential for
+        clinical and AI alignment applications.
+      </p>
+      <p>
+        <strong>Advantages Over Traditional Binary Theories</strong>:
+        Traditional models often impose hard thresholds and lack dynamic
+        recovery mechanisms from low \( C \) to high \( C \). This framework
+        covers the entire continuous spectrum with a single set of equations and
+        provides operable parameter diagnostic pathways, making it more suitable
+        for complex multi-agent environments and clinical translation.
+      </p>
+      <p>Detailed simulation code are provided in the appendix 4.</p>
+
               
               <h4>7. Continuity between quantum levels and cosmic scales</h4>
               <p>This framework establishes a mathematical continuity from the quantum 
