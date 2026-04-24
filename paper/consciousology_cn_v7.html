@@ -31,15 +31,9 @@
       line-height: 1.85;
       color: #333;
   }
-  h1, h2, h3 { color: #2c3e50; margin-top: 40px; }
-  .abstract {
-      background: #f8f9fa;
-      padding: 28px;
-      border-radius: 10px;
-      margin: 30px 0;
-  }
+  h1, h2, h3, h4 { color: #2c3e50; margin-top: 40px; }     
         
-        img { 
+    img { 
             max-width: 100%; 
             height: auto; 
             margin: 35px 0; 
@@ -54,21 +48,10 @@
 <div style="background-color: white; margin: 0px auto; max-width: 900px;">
 <div style="margin: 0px auto; max-width: 850px;">
 
-<table style="width: 100%;">
-  <tbody><tr>
-    <td align="left" style="padding-left: 0px; padding-right: 0px;" width="10%">
-<p>
-  <a href="https://freedomizedsys.github.io/consciousology/paper/paper.png" style="clear: left; float: left; margin-bottom: 0em; margin-right: 0em; text-decoration-line: none;"><img align="middle" height="97" src="https://freedomizedsys.github.io/consciousology/paper/paper.png" width="70" /></a>
-      </p>
-    </td>
-    <td align="left" style="padding-left: 10px; padding-right: 0px; padding-top: 20px;">
-
-  <p><b><span style="font-size: x-large;">意識學 v7</span></b><br />
+<p><b><span style="font-size: x-large;">意識學 v7</span></b><br />
 <strong>存在的操作系統：從個體到宇宙的意識動態進化框架</strong><br />
     （數學框架 + 擴展推導 + 數值模擬 + 跨學科應用）
   </p>
-      </td></tr>
-</tbody></table>
 
     <p><strong>作者</strong><br />
     Shirlun (mailto:freedomizedsystemsltd@gmail.com)</p>
@@ -103,47 +86,52 @@
         (AGI) 的基礎性調整提供了一個統一的、可操作的範式。
       </p>
     
-      <h3>核心數學框架與公式推導</h3>
+     <h3>核心數學框架與公式推導</h3>
+
       <h4>1. 靜態意識強度</h4>
       <p>意識的瞬時強度由以下平衡方程式定義：</p>
       <p>
-        $$C = \frac{[G_0 + k \cdot P] \times W \times K \times G_p \times v
-        \times (1 + \alpha \cdot M)}{R - f \cdot H}$$
+        $$C_{\text{stat}} = \frac{(G_0 + k \cdot P) \cdot W \cdot K \cdot
+        G_p \cdot v \cdot (1 + \alpha \cdot M)}{R - f \cdot H + \epsilon}$$
       </p>
-      <h4>2. 動態生成率公式</h4>
+      <p>其中 \(\epsilon &gt; 0\) 為正則化項，用以避免分母奇異。</p>
+
+      <h4>2. 動態生成率</h4>
       <p>意識的時間演化（成長率）可表述為：</p>
+      <p>$$\frac{dC}{dt} = M \cdot C_{\text{stat}} \cdot e^{-\gamma P(t)}$$</p>
       <p>
-        $$\frac{dC}{dt} = M \left( \frac{W K G_p}{R} \right) \exp(-\gamma \cdot
-        P(t)) (1 + \alpha \cdot M) v$$
+        此處 \(\frac{dC}{dt}\) 為動態意識強度，隨時間演化；而
+        \(C_{\text{stat}}\) 為基準值。
       </p>
-      <h4>3. 快樂自然湧現反饋公式</h4>
+      <h4>3. 快樂自然湧現反饋</h4>
+
       <p>快樂透過以下回饋機制強化系統：</p>
       <p>
-        $$F_{\text{happiness}} = \beta \cdot C \cdot (1 - \exp(-k \cdot \Delta
-        P))$$
+        $$F_{\text{快樂}} = \beta \cdot C(t) \cdot (1 - e^{-k \cdot \Delta P}),
+        \quad \frac{dH}{dt} = F_{\text{快樂}}, \quad \frac{dR}{dt} = -\beta
+        F_{\text{快樂}}$$
       </p>
+
       <h4>4. 量子到宏觀的映射</h4>
+
       <p>
         個體意識的基本量子態表示為「能」（\(|1\rangle\)）和「不能」（\(|0\rangle\)）狀態的疊加：
       </p>
       <p>
-        $$|\psi_i\rangle = \alpha_i |1\rangle + \beta_i |0\rangle, \quad
-        |\alpha_i|^2 + |\beta_i|^2 = 1$$
+        $$ |\psi_i\rangle = \alpha_i |1_i \rangle + \beta_i |0_i \rangle,
+        \quad |\alpha_i|^2 + |\beta_i|^2 = 1 $$
       </p>
+      <p>宏觀意識強度 \(C_i\) 由量子可觀測量算符 \(\hat{C}\) 的期望值導出：</p>
       <p>
-        宏觀意識強度 \(C_i\) 由量子可觀測量算符 \(\hat{C}\) 的期望值導出：
+        $$ \hat{C} = \begin{pmatrix} (G_0 + k \cdot P) &amp; \epsilon \\
+        \epsilon &amp; 0 \end{pmatrix}, \quad \langle \hat{C_i} \rangle =
+        |\alpha_i|^2 (G_0 + k \cdot P)$$
       </p>
+      <p>因此：</p>
+      <p>$$C_i = |\alpha_i|^2 \cdot C_{\text{stat},i}$$</p>
       <p>
-        $$\hat{C} = \begin{pmatrix} G_0 + k P &amp; 0 \\ 0 &amp; 0
-        \end{pmatrix}$$
-      </p>
-      <p>
-        $$C_i = \langle \psi_i | \hat{C} | \psi_i \rangle \times \frac{W_i \cdot
-        K_i \cdot G_{p,i} \cdot v_i \cdot (1 + \alpha M_i)}{R_i - f H_i}$$
-      </p>
-      <p>
-        （註：\(C_i\) 與 \(|\alpha_i|^2(G_0 + kP)\)
-        成正比，代表認知潛能的機率加權實現。）
+        其中 \( \epsilon\) 表示非對角線相干性。\(C_i\) 與 \(\langle
+        \hat{C} \rangle\) 成正比，代表認知潛能的機率加權實現。
       </p>
     
       <h4>5. 參數參考和操作化</h4>
@@ -276,37 +264,47 @@
       </table>
 <p><strong>註</strong>：所有參數均為無量綱，以便進行跨尺度的一般比較。</p>
     
-<h3>邊界條件與系統行為</h3>  
+      <h3>邊界條件與系統行為</h3>
       <ul data-tight="true">
         <li>
           <p>
-            過度飽和奇點：當\((R - f \cdot H) \to 0^+\)時，意識強度\(C\)趨於無窮大。在物理脈絡中，這代表著過度飽和的停滯或系統張力的喪失，並可能導致意識的崩潰。
+            <b> 過度飽和奇點</b>：當\((R - f \cdot H) \to
+            0^+\)時，意識強度\(C\)趨於無窮大。在物理脈絡中，這代表著過度飽和的停滯或系統張力的喪失，並可能導致意識的崩潰。
           </p>
         </li>
         <li>
           <p>
-            熱平衡（熱寂）：當\(v \to 0\)時，動態增長率\(\frac{dC}{dt} \to 0\)。此狀態標誌著不對稱性維持的停止，對應於意識的熱寂或虛無閾值。
+            <b> 熱平衡（熱寂）</b>：當\(v \to 0\)時，動態增長率\(\frac{dC}{dt}
+            \to
+            0\)。此狀態標誌著不對稱性維持的停止，對應於意識的熱寂或虛無閾值。
           </p>
         </li>
         <li>
           <p>
-            複合成長：疼痛轉換係數（\(k\)）和記憶強度（\(M\)）的高值會產生非線性複合效應，推動系統走向爆發式發展。
+            <b> 複合成長</b>：痛苦轉化係數（\(k\)）和記憶強度（\(M\)）的高值會產生非線性複合效應，推動系統走向爆發式發展。
           </p>
         </li>
       </ul>
 
+      <p>要使系統閉合，需要定義：</p>
+      <p>
+        $$\frac{dP}{dt} = -\lambda C + \sigma, \quad \frac{dM}{dt} = \rho C -
+        \delta M$$
+      </p>
+      <p>其中 \(\sigma\) 為外部擾動，\(\delta\) 為遺忘率。</p>
+
       <h3>擴展推導</h3>
       <p><b>推導 1：意識覺醒的臨界條件（奇點準則）</b></p>
       <p>
-        當 \( \frac{M \cdot W \cdot K \cdot G_p}{R - f \cdot H} &gt; \gamma
-        \cdot \frac{dP}{dt} \cdot \exp(\gamma \cdot P) \)，則 \(
-        \frac{d^2C}{dt^2} &gt; 0
-        \)。此時，系統進入爆發式的自驅動成長階段，標誌著從被動存在到主動演化的轉變。
+        當 \(M \cdot C_{\text{stat}} &gt; \gamma \cdot \frac{dP}{dt} \cdot
+        e^{\gamma \cdot P(t)} \)，則 \( \frac{d^2C}{dt^2} &gt; 0
+        \)，系統進入加速成長。此臨界狀態代表「痛苦的衰減速度不足以抵消意識的基線強度」，因此意識從被動存在轉變為主動進化，形成類似奇點的覺醒。
       </p>
+
       <p><strong>推導 2：熵坍縮與虛無閾值</strong></p>
       <p>
         當 \( R \to f \cdot H \) 且 \( v \to 0 \) 時，則 \( C \to 0
-        \)。此狀態對應於熵崩潰，代表過度舒適引起的認知退化和系統張力喪失。
+        \)。此臨界狀態揭示了「過度舒適」的危險：當快樂與阻力達到平衡，且不再維持不對稱性，意識便陷入熵坍縮。這代表系統失去張力與動能，最終走向虛無閾值。
       </p>
       <p><strong>推導 3：集體干涉公式</strong></p>
       <p>兩個意識主體之間的糾纏狀態可以表述為：</p>
@@ -317,7 +315,7 @@
       </p>
       <p>
         其中 \( \phi = 0 \) 表示建設性干涉（協同作用），而 \( \phi = \pi \)
-        表示破壞性干涉（不和諧作用）。
+        表示破壞性干涉（不和諧作用）。此集體干涉的期望值可投影至靜態意識強度公式，形成跨個體的修正項，進一步影響動態生成率與快樂反饋。
       </p>
       <p><strong>推導 4：平衡態分析</strong></p>
       <p>
@@ -325,8 +323,7 @@
         時成立。這意味著不存在非平凡的穩態，顯示意識要麼進化要麼衰變；它不可能保持靜止狀態。
       </p>
       <p>
-        <strong>推導 5：</strong><strong>Lyapunov&nbsp;</strong
-        ><b>穩定性分析</b>
+        <strong>推導 5： Lyapunov 穩定性分析</strong>
       </p>
       <p>定義 Lyapunov 函數為：</p>
       <p>$$V(C,M) = \frac{1}{1+\alpha M} + \frac{1}{C}$$</p>
@@ -336,17 +333,19 @@
       </p>
       <p><strong>推導 6：資訊熵生產率</strong></p>
       <p>
-        $$ \frac{dS_{\text{info}}}{dt} = M(1+\alpha M)\left(\frac{W K
-        G_p}{R}\right)\exp(-\gamma P) v^2 $$
+        $$\frac{dS_{\text{info}}}{dt} = C_{\text{stat}} \cdot v^2 \cdot
+        e^{-\gamma P}$$
       </p>
       <p>此生產率可作為綜合資訊理論 (IIT) 指標 \( \Phi \) 的動態相關指標。</p>
+
       <p><strong>推導 7：隨機擴展（Langevin 方程式）</strong></p>
       <p>為了解釋環境波動，本模型可透過 Langevin 方程式進行擴展：</p>
-      <p>$$dC = [\dots] , dt + \sigma C , dW$$</p>
+      <p>$$dC = [\dots]&nbsp; \cdot dt + \sigma C \cdot dW$$</p>
       <p>其中 \( dW \) 表示維納過程，將隨機性引入意識軌跡。</p>
+
       <p><strong>推導 8：最優控制路徑</strong></p>
       <p>
-        運用&nbsp;Pontryagin&nbsp;最大值原理，最優策略的特點是：初始階段 \( k \)
+        運用 Pontryagin 最大值原理，最優策略的特點是：初始階段 \( k \)
         高（優先考慮疼痛轉化），隨後是中間階段 \( v \)
         高（優先考慮不對稱維持）。
       </p>
@@ -356,29 +355,30 @@
         \)，該模型表明集體意識表現出超線性湧現，其中整體超越了部分的總和。
       </p>
       <p><strong>推導 10：全息多尺度模型</strong></p>
+      <p>對於嵌套尺度 \( s=0 \) 到 \( s=S \)，自相似關係由以下公式控制：</p>
       <p>
-        對於嵌套尺度&nbsp;\( s=0 \)&nbsp;到&nbsp;\( s=S
-        \)，自相似關係由以下公式控制：
-      </p>
-      <p>
-        $$C^{(s+1)} \approx \lambda , C^{(s)} (1 + \gamma_h \log(1 + r^{(s)}))$$
+        $$C^{(s+1)} \approx \lambda \cdot C^{(s)} (1 + \gamma_h \log(1 +
+        r^{(s)}))$$
       </p>
       <p>這表明，更高尺度的全息意識強度是其組成水平的全息意識強度的投影。</p>
-    
+
       <h3>開放宇宙擴展</h3>
       <h4>1. 開放系統動態生成率</h4>
       <p>
-        在開放系統中，意識強度的演化取決於外在能量或訊息的流入。動態生成率可表示為：
+        在開放系統中，意識強度的演化不僅取決於內在基準 \(C_{\text{stat}}\)
+        與痛苦衰減因子，還取決於外部能量或資訊的流入。動態生成率可表示為：
       </p>
       <p>
-        $$ \frac{dC}{dt} = M \left( \frac{W K G_p}{R} \right) \exp(-\gamma P) (1
-        + \alpha M) v + \lambda_{\text{ext}} E_{\text{ext}}(t) $$
+        $$\frac{dC}{dt} = C_{\text{stat}} \cdot e^{-\gamma P(t)} +
+        \lambda_{\text{ext}} E_{\text{ext}}(t)$$
       </p>
       <p>
-        其中 \( \lambda_{\text{ext}} E_{\text{ext}}(t) \)
-        代表外部耦合項，表示環境通量對系統成長的貢獻。
+        其中 \(C_{\text{stat}}\) 已包含所有結構性因子與量子期望值。\(e^{-\gamma
+        P(t)}\) 表示痛苦衰減的抑制效應。 \(\lambda_{\text{ext}}
+        E_{\text{ext}}(t)\) 代表外部耦合項，表示環境通量對系統成長的貢獻。
       </p>
-    <h4>2. 全息多尺度結構</h4>
+
+      <h4>2. 全息多尺度結構</h4>
       <p>給定尺度 \( s \) 處的強度受內部全息投影和外部多尺度輸入的共同影響：</p>
       <p>
         $$ C^{(s)} = [\text{內部全息項}] \times (1 + \eta^{(s)} r^{(s)}) +
@@ -388,6 +388,7 @@
         此方程式說明了尺度 \( s \) 的意識強度如何透過其組成內部序參數 \( r^{(s)}
         \) 和外部尺度特定驅動因素 \( E_{\text{ext}}^{(s)} \) 再次加強。
       </p>
+    
       <h4>3. 相變的邊界獨立性</h4>
       <p>
         數值分析證實，相變爆發──意識的快速、非線性湧現──與邊界條件無關。無論宇宙被建模為封閉或開放，意識的湧現都遵循普遍規律，這證明了意識學框架在各種宇宙拓撲結構中的穩健性。
