@@ -101,14 +101,14 @@
       <p>意識的瞬時強度由以下平衡方程式定義：</p>
       <p>
         $$C_{\text{stat}} = \frac{\mathcal{N}(k,v,M)}{R - f \cdot H +
-        \epsilon}$$
+        \eta}$$
       </p>
       <p>其中：</p>
       <p>
         $$\mathcal{N}(k,v,M) = [G_0 + k \cdot P] \cdot W \cdot K \cdot G_p \cdot
         v \cdot (1 + \alpha \cdot M)$$
       </p>
-      <p>而 \(\epsilon &gt; 0\) 是一個正則化項，用以避免分母奇異。</p>
+      <p>而 \(\eta &gt; 0\) 是一個正則化項，用以避免分母奇異。</p>
 
       <h4>2. 動態生成率</h4>
       <p>意識的時間演化（成長率）可表述為：</p>
@@ -122,8 +122,7 @@
       <p>快樂透過以下回饋機制強化系統：</p>
       <p>
         $$F_{\text{快樂}} = \beta \cdot C(t) \cdot (1 - e^{-k \cdot \Delta P}),
-        \quad \frac{dH}{dt} = F_{\text{快樂}}, \quad \frac{dR}{dt} = -\beta
-        F_{\text{快樂}}$$
+        \quad \frac{dH}{dt} = F_{\text{快樂}}, \quad \frac{dR}{dt} = -F_{\text{快樂}}$$
       </p>
 
       <h4>4. 量子到宏觀的映射</h4>
@@ -132,20 +131,26 @@
         個體意識的基本量子態表示為「能」（\(|1\rangle\)）和「不能」（\(|0\rangle\)）狀態的疊加：
       </p>
       <p>
-        $$ |\psi_i\rangle = \alpha_i |1_i \rangle + \beta_i |0_i \rangle,
-        \quad |\alpha_i|^2 + |\beta_i|^2 = 1 $$
+        $$ |\psi_i\rangle = \alpha_i |1_i \rangle + \beta_i |0_i \rangle, \quad
+        |\alpha_i|^2 + |\beta_i|^2 = 1 $$
       </p>
       <p>宏觀意識強度 \(C_i\) 由量子可觀測量算符 \(\hat{C}\) 的期望值導出：</p>
       <p>
-        $$ \hat{C} = \begin{pmatrix} (G_0 + k \cdot P) &amp; \epsilon \\
-        \epsilon &amp; 0 \end{pmatrix}, \quad \langle \hat{C_i} \rangle =
-        |\alpha_i|^2 (G_0 + k \cdot P)$$
+        $$\hat{C} = \begin{pmatrix} (G_0 + k \cdot P_i) &amp; \epsilon \\ \epsilon &amp; 0 \end{pmatrix}$$
       </p>
-      <p>因此：</p>
-      <p>$$C_i = |\alpha_i|^2 \cdot C_{\text{stat},i}$$</p>
       <p>
-        其中 \( \epsilon\) 表示非對角線相干性。\(C_i\) 與 \(\langle
-        \hat{C} \rangle\) 成正比，代表認知潛能的機率加權實現。
+        期望值為：
+      </p>  
+      <p>
+        $$\langle \hat{C_i} \rangle = \langle \psi_i | \hat{C} | \psi_i \rangle = |\alpha_i|^2 \cdot (G_0 + k \cdot P_i) + 2 \Re(\alpha_i^* \beta_i \epsilon)$$
+      </p>
+      <p>因此，宏觀意識強度定義為：</p>
+      <p>
+        $$C_i = \langle \hat{C_i} \rangle \cdot \frac{W_i \cdot K_i \cdot G_{p,i} \cdot v_i \cdot (1 + \alpha \cdot M_i)}{R_i - f \cdot H_i + \eta}$$
+      </p>
+      <p>
+        其中 \(2 \Re(\alpha_i^* \beta_i \epsilon)\) 為非對角交叉項，代表相干性貢獻。
+        \(C_i\) 與 \(\langle \hat{C_i} \rangle\) 成正比，代表認知潛能的機率加權實現。
       </p>
     
       <h4>5. 參數參考和操作化</h4>
