@@ -1695,30 +1695,82 @@ class MeanFieldSynchronizationModule:
         </tbody>
       </table>
 
-  <h4>2. 逆熵效率的參數量化與校準方法</h4>
-  <p>為使逆熵效率 \(η_neg\) 具備可操作性與可驗證性，本框架提出以下多層量化與校準方案：</p>
-    <ul>
-        <li><p><strong>個體層面測量（日誌記錄法）</strong><br />\(η_neg\) 可以根據「無意識時間比例」和平均痛苦強度 P 進行近似估計：<br />
-        \(η_neg ≈ − (無意識時間比例 × 平均 P)\)<br />例如，8小時的睡眠（此時 v ≈ 0）可估計 \(η_neg ≈ −0.005/s\)。</p>
-    </li></ul>
-    <ul><li><p><strong>神經層代理指標（EEG / fMRI）<br /></strong>\(δ_deco\)（退相干貢獻）≈ 1 / 有效退相干時間尺度（宏觀尺度上估計為 \(10^{-4} s^{-1}\)）；<br />
-        \(γ_noise\)（噪音貢獻）≈ θ波功率變異度（σ²）；<br />
-        \(λ_sym\)（對稱恢復力）≈ δ/α 功率比（睡眠期間顯著升高）；<br />
-        \(μ_neg · P_untrans\) 則由未轉化殘痛苦餘量（\(P_untrans = P − k·P\)）估計。
-    </p></li></ul>
-    <ul><li><p><strong>校準方法</strong><br />採用最小二乘法擬合模型參數：<br />
-        $$\hat{\eta}_{\text{neg}} = \arg\min \sum \left( C_{\text{obs}} - C_{\text{pred}} \right)^2$$<br />
-        使用縱向睡眠－覺醒數據、麻醉狀態數據等進行校準。</p>
-    </li></ul>
-    <ul><li><p><strong>與實證數據的比較<br /></strong>
-        Tononi（2016）的睡眠研究顯示，在非REM階段， Φ 值（整合資訊理論）顯著降低。本框架預測的結果與此一致（\(η_neg\) 占主導地位，C 接近 0）。<br />
-        Alkire 等人的麻醉研究顯示，高 \(δ_deco\) 導致 \(\dot{C} &lt; −0.02 s^{-1}\)。本框架的預測與此一致。</p>
-    </li></ul>
-    <ul><li><p><strong>可證偽性</strong><br />
-        若在高噪音環境（例如長期城市暴露）中，腦成像未能觀察到 \(η_neg\) 上升伴隨著 C 下降，則需調整 \(δ_deco\) 或 \(γ_noise\) 權重。這種實證檢驗可以對本框架進行迭代改進。</p>
-    </li></ul>
+       <h4>2. 逆熵效率的參數量化與校準方法</h4>
+      <p>
+        為使逆熵效率 \(\eta_{\text{neg}}\)
+        具備可操作性與可驗證性，本框架提出多層次的量化與校準方案：
+      </p>
+      <p><b>個體層面測量（行為日誌法）</b></p>
+      <p>可對 \(\eta_{\text{neg}}\)&nbsp;進行近似估計：</p>
+      <p>
+        $$\eta_{\text{neg}} \approx - \left( \text{無意識時間比例} \cdot
+        \overline{P} \right)$$
+      </p>
+      <p>
+        其中 \(\overline{P}\) 為平均痛苦強度。例如，8 小時睡眠（此時 \(v \approx
+        0\)）可估計： \(\eta_{\text{neg}} \approx -0.005 / s\)
+      </p>
+      <p><b>神經層代理指標（EEG / fMRI）</b></p>
+      <ul data-tight="true">
+        <li>
+          <p>
+            退相干貢獻：\(\delta_{\text{deco}} \approx
+            \frac{1}{T_{\text{deco}}}, \quad T_{\text{deco}} \sim 10^{-4 }
+            s^{-1}\)
+          </p>
+        </li>
+        <li>
+          <p>
+            噪音貢獻：\(\gamma_{\text{noise}} \approx \sigma^2_{\theta}\) 其中
+            \(\sigma^2_{\theta}\) 為 \(\theta\) 波功率變異度。
+          </p>
+        </li>
+        <li>
+          <p>
+            對稱恢復力：\(\lambda_{\text{sym}} \approx \frac{\delta}{\alpha}\)
+            在睡眠期間顯著升高。
+          </p>
+        </li>
+        <li>
+          <p>
+            未轉化殘餘痛苦量：\(P_{\text{untrans}} = P - k \cdot P\) 估計關聯
+            \(\eta_{\text{neg}} \cdot P_{\text{untrans}}\)。
+          </p>
+        </li>
+      </ul>
+      <p><b>校準方法</b></p>
+      <p>採用最小二乘法擬合模型參數：</p>
+      <p>
+        $$\hat{\eta}_{\text{neg}} = \arg\min_{\eta_{\text{neg}}} \sum \left(
+        C_{\text{obs}} - C_{\text{pred}} \right)^2$$
+      </p>
+      <p>使用縱向睡眠－覺醒數據、麻醉狀態數據進行校準。</p>
+      <p><b>與實證數據比較</b></p>
+      <ul data-tight="true">
+        <li>
+          <p>
+            Tononi（2016）睡眠研究：非 REM 階段 \(\Phi\)
+            值顯著降低，本框架預測一致（\(\eta_{\text{neg}}\) 占主導，\(C \to
+            0\)）。
+          </p>
+        </li>
+        <li>
+          <p>
+            Alkire 等人麻醉研究：高 \(\delta_{\text{deco}}\) 導致 \(\dot{C} &lt;
+            -0.02\) \(s^{-1}\) 與本框架預測一致。
+          </p>
+        </li>
+      </ul>
+      <p><b>可證偽性</b></p>
+      <p>
+        若在高噪音環境（如長期城市暴露）中，腦成像未能觀察到
+        \(\eta_{\text{neg}}\) 上升伴隨 \(C\) 下降，則需調整
+        \(\delta_{\text{deco}}\) 或 \(\gamma_{\text{noise}}\)
+        的權重。此類實證檢驗可推動框架迭代改進。
+      </p>
+      
 
-<h4>3. ......</h4>h4>
+<h4>3. ......</h4>
     
     <h3>可重現性聲明</h3>
   <p>為確保本研究的透明性與可重現性，我們提供以下完整技術細節與資源：</p>
