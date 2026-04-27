@@ -1469,297 +1469,231 @@ class MeanFieldSynchronizationModule:
     為方便讀者，本附錄總結了四種代表性情境的主要模擬結果。所有數據均來自
     RK4 自適應步長積分（t = 0 至 100），Monte Carlo 平均值（10,000 次運行）。
   </p>
-  <p><strong>表 A1：四種情境下最終意識強度 \(C(100)\) 與關鍵指標</strong></p>
-  <table border="1" style="border-collapse: collapse; width: 100%;">
-    <tbody>
-      <tr>
-        <th>
-          
-          <span style="font-size: x-small;">情境</span> 
-        </th>
-        <th>
-          
-          <span style="font-size: x-small;">k</span> 
-        </th>
-        <th>
-          
-          <span style="font-size: x-small;">P₀</span> 
-        </th>
-        <th>
-          
-          <span style="font-size: x-small;">R</span> 
-        </th>
-        <th>
-          
-          <span style="font-size: x-small;">C(100)</span> 
-        </th>
-        <th>
-          
-          <span style="font-size: x-small;">平均成長率</span> 
-        </th>
-        <th>
-          
-          <span style="font-size: x-small;">M(100)</span> 
-        </th>
-        <th>
-          
-          <span style="font-size: x-small;">最終同步序參數 r</span> 
-        </th>
-        <th>
-          
-          <span style="font-size: x-small;">備註</span> 
-        </th>
-      </tr>
-      <tr>
-        <td>
-          
-          <span style="font-size: x-small;">Sc1: 高痛苦高轉化</span> 
-        </td>
-        <td>
-         
-         <span style="font-size: x-small;">0.8</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">8.0</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">1.0</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">9.19</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.091</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">2.22</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.78</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">複合效應最顯著</span> 
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          <span style="font-size: x-small;">Sc2: 低痛苦高快樂</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.2</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">1.0</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">1.0</span> 
-        </td>
-        <td>
-         
-         <span style="font-size: x-small;">3.52</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.034</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.95</span> 
-        </td>
-        <td>
-         
-         <span style="font-size: x-small;">0.31</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">成長最緩慢</span> 
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          <span style="font-size: x-small;">Sc3: 平衡情境</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.5</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">4.0</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">1.5</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">10.18</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.101</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">2.18</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.82</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">最佳綜合表現</span> 
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          <span style="font-size: x-small;">Sc4: 高阻力低轉化</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.15</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">4.0</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">3.0</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">2.32</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.022</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.68</span> 
-        </td>
-        <td>
-         
-         <span style="font-size: x-small;">0.19</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">最差成長表現</span> 
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <p><strong>表 A2：參數敏感性掃描摘要（Monte Carlo 10,000 次）</strong></p>
-  <table border="1" style="border-collapse: collapse; width: 100%;">
-    <tbody>
-      <tr>
-        <th>
-          
-          <span style="font-size: x-small;">參數</span> 
-        </th>
-        <th>
-          
-          <span style="font-size: x-small;">掃描範圍</span> 
-        </th>
-        <th>
-            
-            <span style="font-size: x-small;">對 C(100) 的 Sobol’ 敏感性指數</span>
-            
-        </th>
-        <th>
-          
-          <span style="font-size: x-small;">主要影響描述</span> 
-        </th>
-      </tr>
-      <tr>
-        <td>
-          
-          <span style="font-size: x-small;">k（痛苦轉化效率）</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.1 – 1.0</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.62</span> 
-        </td>
-        <td>
-            
-            <span style="font-size: x-small;">最強影響因子，臨界值 ≈ 0.6</span> 
-        </td>
-      </tr>
-      <tr>
-        <td>
-            
-            <span style="font-size: x-small;">v（不對稱性維持率）</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.01 – 0.1</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.28</span> 
-        </td>
-        <td>
-            
-            <span style="font-size: x-small;">次要但關鍵，影響長期複合</span> 
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          <span style="font-size: x-small;">α（記憶貢獻係數）</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.1 – 0.4</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.15</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">強化複合效應</span> 
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          <span style="font-size: x-small;">R（阻力）</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.5 – 3.0</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">0.09</span> 
-        </td>
-        <td>
-          
-          <span style="font-size: x-small;">高阻力顯著抑制成長</span> 
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    
+      <p>
+        <strong>表 A1：四種情境下最終意識強度 \(C(100)\) 與關鍵指標</strong>
+      </p>
+      <table border="1" style="border-collapse: collapse; width: 100%;">
+        <tbody>
+          <tr>
+            <th>
+              <span style="font-size: x-small;">情境</span>
+            </th>
+            <th>
+              <span style="font-size: x-small;">\(k\)</span>
+            </th>
+            <th>
+              <span style="font-size: x-small;">\(P_0\)</span>
+            </th>
+            <th>
+              <span style="font-size: x-small;">\(R\)</span>
+            </th>
+            <th>
+              <span style="font-size: x-small;">\(C(100)\)</span>
+            </th>
+            <th>
+              <span style="font-size: x-small;">平均成長率</span>
+            </th>
+            <th>
+              <span style="font-size: x-small;">\(M(100)\)</span>
+            </th>
+            <th>
+              <span style="font-size: x-small;">最終同步序參數 \(r\)</span>
+            </th>
+            <th>
+              <span style="font-size: x-small;">備註</span>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-size: x-small;">Sc1: 高痛苦，高轉化</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.8</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">8.0</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">1.0</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">9.19</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.091</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">2.22</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.78</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">複合效應最為顯著</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-size: x-small;">Sc2: 低痛苦，高快樂</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.2</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">1.0</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">1.0</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">3.52</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.034</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.95</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.31</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">成長最緩慢</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-size: x-small;">Sc3: 平衡狀態</span></td>
+            <td>
+              <span style="font-size: x-small;">0.5</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">4.0</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">1.5</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">10.18</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.101</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">2.18</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.82</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">最佳整體表現</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-size: x-small;">Sc4: 高阻力，低轉化</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.15</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">4.0</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">3.0</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">2.32</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.022</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.68</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.19</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">成長表現最差</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>表 A2：參數敏感性掃描摘要（Monte Carlo 10,000 次）</strong></p>
+      <table border="1" style="border-collapse: collapse; width: 100%;">
+        <tbody>
+          <tr>
+            <th>
+              <span style="font-size: x-small;">參數</span>
+            </th>
+            <th>
+              <span style="font-size: x-small;">掃描範圍</span>
+            </th>
+            <th>
+              <span style="font-size: x-small;">對 \(C(100)\) 的 Sobol’ 敏感性指數</span>
+            </th>
+            <th>
+              <span style="font-size: x-small;">主要影響描述</span>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-size: x-small;">\(k\)（痛苦轉化效率）</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.1 – 1.0</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.62</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">影響最大的因素，臨界值約為 0.6</span></td>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-size: x-small;">\(v\)（不對稱性維持率）</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.01 – 0.1</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.28</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">次要但關鍵，影響長期複合效應</span></td>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-size: x-small;">\(\alpha\)（記憶貢獻係數）</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.1 – 0.4</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.15</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">強化複合效應</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span style="font-size: x-small;">\(R\)（阻力）</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.5 – 3.0</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">0.09</span>
+            </td>
+            <td>
+              <span style="font-size: x-small;">高阻力顯著抑制成長</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
   <h4>2. 逆熵效率的參數量化與校準方法</h4>
   <p>為使逆熵效率 \(η_neg\) 具備可操作性與可驗證性，本框架提出以下多層量化與校準方案：</p>
