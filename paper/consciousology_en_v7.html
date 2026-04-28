@@ -1819,11 +1819,11 @@ class MeanFieldSynchronizationModule:
       <p>
         Building upon multi-agent dynamic damping and negentropy efficiency,
         this framework provides a formal model for low-consciousness states.
-        These states—characterized by unconsciousness or diminished
+        These states—characterized by near-unconsciousness or diminished
         awareness—correspond to stable regimes where Consciousness Intensity (\(
-        C \)) asymptotically approaches a minimal value (\( C \approx 0 \)). The
-        dynamic generation rate converges toward zero when one or more of the
-        following boundary conditions are met:
+        C \)) asymptotically approaches a minimal value (\( C \approx 0 \)).
+        Numerical simulations demonstrate that the dynamic generation rate converges
+        toward zero when one or more of the following boundary conditions are met:
       </p>
       <p>
         $$\frac{dC}{dt} \approx 0 \quad \text{when } \mathcal{N}(k,v,M) \to 0 \quad \text{or } R \gg \mathcal{N}(k,v,M)$$
@@ -1909,7 +1909,17 @@ class MeanFieldSynchronizationModule:
           </tr>
         </tbody>
       </table>
-            
+      <p>
+        Numerical experiments demonstrate that under the aforementioned extreme
+        conditions, the consciousness intensity \(C(t)\) decreases rapidly and
+        then levels off within the simulation time, exhibiting a clear stable
+        behavior. The dominant conditions \(k \to 0\) and \(R\) demonstrate
+        strong inhibitory effects, while the inhibitory effects of \(v \to 0\)
+        and \(M \to 0\) are highly similar in the extremely low region. This
+        result is consistent with the model's prediction: when multiple key
+        parameters simultaneously approach extremely low values, the system
+        enters a highly similar low-consciousness steady state.
+      </p>            
       <p><b>Stability and Continuous Spectrum Analysis</b></p>
       <p>
         Stability Proof: Utilizing the Lyapunov function \( V(C, M) = \frac{1}{1
