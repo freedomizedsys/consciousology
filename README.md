@@ -1,5 +1,7 @@
 # Consciousology v7  
-**The Operating System of Existence: A Dynamic Evolutionary Framework for Consciousness from the Individual to the Universe**
+**The Operating System of Existence:**
+
+**A Dynamic Evolutionary Framework for Consciousness from the Individual to the Universe**
 
 # 意識學 v7
 **「存在」的操作系統：從個體到宇宙的意識動態進化框架**
@@ -53,9 +55,11 @@ Consciousology v7 proposes a unified dynamic framework that formalizes conscious
 ## Repository Structure / 儲存庫結構
 
 - `consciousology_v7_simulation.py` — Main simulation script / 主要模擬程式
+- `consciousness_dynamics_simulation.py` - Helper code in Section 5 of the discussion / 討論部分第5節的輔助代碼
+- `low_consciousness_simulation.py` - Helper code in Section 6 of the discussion / 討論部分第6節的輔助代碼
 - `figures/` — Four figures used in the paper / 論文四張圖表
 - `requirements.txt` — Python dependencies / 所需套件
-- `paper/` — Full paper in Markdown / 完整論文 Markdown
+- `paper/` — Full paper in HTML / 完整論文 HTML
 
 ## How to Reproduce / 如何重現
 
